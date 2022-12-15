@@ -1,0 +1,54 @@
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.linkItem {
+  @apply mr-8 last:ml-auto;
+}
+
+.linkItem a {
+  @apply px-4 py-2 flex font-semibold items-center w-full rounded hover:bg-orange-600 hover:text-white duration-200 cursor-pointer;
+}
+
+.linkItem svg {
+  @apply mr-1;
+}
+
+.activeItem {
+  @apply bg-orange-600 text-white;
+}
+.activeItem:hover {
+  background-color: rgb(194 65 12) !important;
+}
+
+.toastStyle {
+  @apply cursor-pointer;
+}
+
+.mainTitle {
+  @apply text-4xl relative my-8 inline-block ml-4;
+}
+
+.mainTitle::after {
+  content: '';
+  @apply absolute -bottom-2 h-1 left-0 w-16 bg-orange-600 rounded duration-300;
+}
+
+.mainTitle:hover::after {
+  @apply w-full;
+}
+
+.btnUi {
+  @apply px-4 py-2 flex font-semibold items-center rounded bg-teal-600 text-white duration-100;
+}
+
+.btnUi:hover {
+  @apply bg-teal-900;
+}
+
+.btnUi svg {
+  @apply w-6 h-6 mr-2;
+}
